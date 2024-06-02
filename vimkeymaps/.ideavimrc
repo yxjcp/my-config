@@ -1,0 +1,42 @@
+"my vim
+"将空格映射为<leader>
+let mapleader = " "
+
+"设置相对行号
+set number relativenumber
+
+"设置每次回到普通模式自动切哈英文
+set keep-english-in-normal
+
+"设置vim可以复制系统文字
+set clipboard+=unnamed
+
+"在命令模式下将jj映射为<Esc>
+imap jj <Esc>
+
+"映射gh为显示光标所在出的信息
+map gh <Action>(QuickImplementations)
+
+"打断点
+nmap <leader>bp <Action>(ToggleLineBreakpoint)
+"调试代码
+nmap <leader>db <Action>(Debug)
+"运行
+map <leader>ru <action>(Run)
+
+"上下滚屏
+nmap <C-j> 6j
+nmap <C-k> 6k
+"上下移动行
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+"分屏
+nmap sv :vsp<CR>
+nmap sh :sp<CR>
+nmap sc <C-w>c
+nmap so <C-w>o
+"窗口导航
+nmap <leader>j <C-w>j
+nmap <leader>h <C-w>h
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
