@@ -1,0 +1,119 @@
+-- 在快捷键中设置上下移动行<M-j>/<M-k>,或其他一些快捷键
+"vim.easymotion": true,
+"vim.incsearch": true,
+"vim.useSystemClipboard": true,
+"vim.useCtrlKeys": true,
+"vim.hlsearch": true,
+"editor.lineNumbers": "relative",
+
+-- 插入模式
+"vim.insertModeKeyBindings": [
+    -- 将jj映射为退出插入模式
+    {
+        "before": [
+            "j",
+            "j"
+        ],
+        "after": [
+            "<Esc>"
+        ]
+    }
+]
+
+-- 普通模式
+"vim.normalModeKeyBindingsNonRecursive": [
+    -- 使用6j/6k上下翻页
+    {
+        "before": [
+            "<C-j>"
+        ],
+        "after": [
+            "6",
+            "j"
+        ]
+    },
+    {
+        "before": [
+            "<C-k>"
+        ],
+        "after": [
+            "6",
+            "k"
+        ]
+    },
+    -- 窗口操作
+    -- 左右分屏
+    {
+        "before": [
+            "s",
+            "v"
+        ],
+        "commands": [
+            "workbench.action.splitEditorRight"
+        ]
+    },
+    -- 上下分屏
+    {
+      "before": [
+        "s",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    -- 关闭当前窗口
+    {
+      "before": [
+        "s",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    -- 更好的窗口导航
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    }
+]
+
+-- leader键映射
+"vim.leader": "<space>"
